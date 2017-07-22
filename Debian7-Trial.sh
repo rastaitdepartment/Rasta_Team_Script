@@ -60,6 +60,8 @@ COMPLETE 1%
 apt-get -y install sudo
 apt-get -y wget
 
+sudo apt-get update
+sudo apt-get upgrade
 
 echo "
 INSTALL COMMANDS
@@ -67,10 +69,6 @@ COMPLETE 15%
 "
 # install webserver
 apt-get -y install nginx
-
-# install essential package
-apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
-apt-get -y install build-essential
 
 # disable exim
 service exim4 stop
@@ -93,13 +91,6 @@ vnstat -u -i eth0
 chown -R vnstat:vnstat /var/lib/vnstat
 service vnstat restart
 
-# install screenfetch
-#cd
-#wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/screenfetch-dev
-#mv screenfetch-dev /usr/bin/screenfetch-dev
-#chmod +x /usr/bin/screenfetch-dev
-#echo "clear" >> .profile
-#echo "screenfetch-dev" >> .profile
 
 # Install Web Server
 cd
