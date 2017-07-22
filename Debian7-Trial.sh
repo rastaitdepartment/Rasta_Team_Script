@@ -78,7 +78,7 @@ sysv-rc-conf exim4 off
 apt-file -y update
 
 # install figlet
-apt-get install figlet
+apt-get -y install figlet
 echo "clear" >> .bashrc
 echo 'figlet -k "$HOSTNAME"' >> .bashrc
 echo 'echo -e "Selamat datang ke server $HOSTNAME"' >> .bashrc
@@ -171,7 +171,7 @@ service ssh restart
 service dropbear restart
 
 # upgrade dropbear 2017
-apt-get install zlib1g-dev
+apt-get -y install zlib1g-dev
 wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2017.75.tar.bz2
 bzip2 -cd dropbear-2017.75.tar.bz2  | tar xvf -
 cd dropbear-2017.75
@@ -234,7 +234,7 @@ sed -i "s/ssl=1/ssl=0/g" /etc/webmin/miniserv.conf
 service vnstat restart
 
 # install Htop
-sudo apt-get install htop
+sudo apt-get -y install htop
 make
 make install
 
