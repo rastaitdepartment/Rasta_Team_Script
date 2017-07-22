@@ -60,8 +60,8 @@ COMPLETE 1%
 apt-get -y install sudo
 apt-get -y wget
 
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 echo "
 INSTALL COMMANDS
@@ -75,7 +75,7 @@ service exim4 stop
 sysv-rc-conf exim4 off
 
 # update apt-file
-apt-file update
+apt-file -y update
 
 # install figlet
 apt-get install figlet
