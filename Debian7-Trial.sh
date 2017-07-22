@@ -94,12 +94,12 @@ chown -R vnstat:vnstat /var/lib/vnstat
 service vnstat restart
 
 # install screenfetch
-cd
-wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/screenfetch-dev
-mv screenfetch-dev /usr/bin/screenfetch-dev
-chmod +x /usr/bin/screenfetch-dev
-echo "clear" >> .profile
-echo "screenfetch-dev" >> .profile
+#cd
+#wget https://raw.githubusercontent.com/rasta-team/MyVPS/master/screenfetch-dev
+#mv screenfetch-dev /usr/bin/screenfetch-dev
+#chmod +x /usr/bin/screenfetch-dev
+#echo "clear" >> .profile
+#echo "screenfetch-dev" >> .profile
 
 # Install Web Server
 cd
